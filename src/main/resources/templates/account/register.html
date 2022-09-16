@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<main>
+		<!-- ACCOUNT-REGISTER -->
+		<div class="container mt-4">
+			<div class="offset-sm-2">
+				<span class="ml-1 new-account-register">Tạo tài khoản</span>
+				<span class="account-register-login offset-sm-5">
+					Bãn đã là thành viên? <a th:href="@{|/account/login/form|}">Đăng nhập</a> tại đây
+				</span>
+			</div>
+			<div class="row mt-3">
+				<div class="col-sm-8 offset-sm-2">
+					<div class="card card-account-register">
+						<div class="card-body">
+							<form action="/account/register" method="post">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-gruop">
+											<label>Tên đăng nhập</label>
+											<input class="form-control" placeholder="Vui lòng nhập tên đăng nhập!" name="username">
+										</div>
+										<div class="form-gruop mt-2">
+											<label>Mật khẩu</label>
+											<input class="form-control" type="password" placeholder="Vui lòng nhập mật khẩu!" name="password">
+										</div>
+										<div class="form-gruop mt-2">
+											<label>Họ và tên</label>
+											<input class="form-control" placeholder="Vui lòng nhập họ và tên!" name="fullname">
+										</div>
+										<div class="form-gruop mt-2">
+											<label>Email</label>
+											<input class="form-control" type="email" placeholder="Vui lòng nhập email!" name="email">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<button class="btn btn-register mt-3">ĐĂNG KÍ</button>
+										<p class="mt-2 security-account-register">
+											Tôi đã đọc và đồng ý với <a href="">Điều Khoản Sử Dụng</a> 
+											và <a href="">Chính Sách Bảo Mật của Shop Online</a> 
+											của Shop Online, bao gồm quyền thu thập, sử dụng, và tiết 
+											lộ dữ liệu cá nhân của tôi theo pháp luật quy định.
+										</p>
+										<p class="mt-3 account-registerwith">Hoặc đăng kí với</p>
+										<button class="btn btn-register-email">Đăng kí bằng Email</button>
+										<button class="btn btn-register-facebook mt-3">
+											<i class="fa-brands fa-facebook-f"></i> Facebook
+										</button>
+										<button class="btn btn-register-google mt-3 ml-2">
+											<i class="fa-brands fa-google"></i> Google
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ACCOUNT-REGISTER-END -->
+	</main>
+</body>
+</html>

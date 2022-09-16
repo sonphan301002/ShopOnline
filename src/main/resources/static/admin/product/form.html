@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container mt-3">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="card text-center">
+							<div class="card-body">
+								<label for="image"> <img
+									ng-src="{{'/assets/images/' + form.image}}" width="250"
+									height="250">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label>Tên sản phẩm</label> <input ng-model="form.name"
+								class="form-control" type="text">
+						</div>
+						<div class="form-group">
+							<label>Hình ảnh</label> <input id="image" class="form-control"
+								type="file"
+								onchange="angular.element(this).scope().imageChanged(this.files)">
+						</div>
+						<div class="form-group">
+							<label>Ngày</label> <input ng-model="form.createDate"
+								class="form-control" type="date">
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+							<label>Giá sản phẩm</label> <input ng-model="form.price"
+								class="form-control" type="number">
+						</div>
+						<div class="form-group">
+							<label>Danh mục</label> 
+							<select class="form-control" ng-model="form.category.id">
+								<option ng-repeat="c in cates" ng-value="c.id">
+									{{c.name}}
+								</option>
+							</select>
+						</div>
+						<div class="form-group mt-4">
+							<label>Còn hàng</label> <br> <input
+								ng-model="form.available" name="available" type="radio"
+								ng-value="true"> Còn <input ng-model="form.available"
+								class="ml-3" name="available" type="radio" ng-value="false">
+							Hết
+						</div>
+					</div>
+				</div>
+				<hr>
+				<button ng-click="create()" class="btn btn-primary">
+					<i class="fa-solid fa-plus"></i> Thêm
+				</button>
+				<button ng-click="update()" class="btn btn-success">
+					<i class="fa-solid fa-pen"></i> Sửa
+				</button>
+				<button ng-click="delete(form)" class="btn btn-danger">
+					<i class="fa-solid fa-trash"></i> Xóa
+				</button>
+				<button ng-click="reset()" class="btn btn-info">
+					<i class="fa-solid fa-arrows-rotate"></i> Trở lại
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container mt-3">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-6">	
+					 	<div class="form-group">
+					 		<label>STT</label>
+					 		<input class="form-control" ng-model="form.id">
+					 	</div>
+					</div>
+					<div class="col-sm-6">	
+					 	<div class="form-group">
+					 		<label>Tên danh mục</label>
+					 		<input class="form-control" ng-model="form.name">
+					 	</div>
+					</div>
+				</div>
+				<hr>
+				<button ng-click="create()" class="btn btn-primary">
+					<i class="fa-solid fa-plus"></i> Thêm
+				</button>
+				<button ng-click="update()" class="btn btn-success">
+					<i class="fa-solid fa-pen"></i> Sửa
+				</button>
+				<button ng-click="delete(form)" class="btn btn-danger">
+					<i class="fa-solid fa-trash"></i> Xóa
+				</button>
+				<button ng-click="reset()" class="btn btn-info">
+					<i class="fa-solid fa-arrows-rotate"></i> Trở lại
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container mt-3">
+		<div class="card">
+			<div class="card-body">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th scope="col">STT</th>
+							<th scope="col">Tên danh mục</th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="cate in pager.items">
+							<td>{{cate.id}}</td>
+							<td>{{cate.name}}</td>
+							<td>
+								<button ng-click="edit(cate)" class="btn btn-warning">
+									<i class="fa-solid fa-pen"></i>
+								</button>
+								<button ng-click="delete(cate)" class="btn btn-danger">
+									<i class="fa-solid fa-trash"></i>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="offset-sm-4">
+					<button ng-click="pager.first()" class="btn btn=primary">First</button>
+					<button ng-click="pager.prev()" class="btn btn=primary">Previous</button>
+					<button class="btn btn=primary">{{pager.page + 1}} of
+						{{pager.count}}</button>
+					<button ng-click="pager.next()" class="btn btn=primary">Next</button>
+					<button ng-click="pager.last()" class="btn btn=primary">Last</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

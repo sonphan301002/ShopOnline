@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<main>
+		<!-- SHOPPING-CART -->
+		<div class="container mt-4" th:fragment="cart">
+			<p class="name-shopping-cart">Giỏ hàng</p>
+			<div class="card card-shopping-cart">
+				<div class="card-body">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">STT</th>
+								<th scope="col">Tên sản phẩm</th>
+								<th scope="col">Giá sản phẩm</th>
+								<th scope="col">Số lượng</th>
+								<th scope="col">Tổng tiền</th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="item in cart.items">
+								<td>{{item.id}}</td>
+								<td>{{item.name}}</td>
+								<td>{{item.price | number: 0}} đ</td>
+								<td><input ng-change="cart.save()" ng-model="item.qty"
+									type="number" min="1"></td>
+								<td>{{item.qty * item.price | number: 0}}</td>
+								<td>
+									<button ng-click="cart.remove(item.id)" class="btn btn-danger">
+										<i class="fa-solid fa-trash"></i>
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<button ng-click="cart.clear()" class="btn btn-danger">
+						<i class="fa-solid fa-ban"></i> Xóa tất cả
+					</button>
+					<a href="/order/checkout" class="btn btn-info"> <i
+						class="fa-solid fa-cart-shopping"></i> Thanh toán
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- SHOPPING-CART-END -->
+	</main>
+</body>
+</html>

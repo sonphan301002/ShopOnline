@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container mt-3">
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="card text-center">
+							<div class="card-body">
+								<div class="form-group">
+									<label for="photo"> <img
+										ng-src="{{'/assets/images/' + form.photo}}" width="200"
+										height="200">
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Tên đăng nhập</label> <input class="form-control"
+										ng-model="form.username">
+								</div>
+								<div class="form-group">
+									<label>Mật khẩu</label> <input class="form-control"
+										type="password" ng-model="form.password">
+								</div>
+								<div class="form-group">
+									<label>Họ và tên</label> <input class="form-control"
+										ng-model="form.fullname">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Hình ảnh</label> <input class="form-control" type="file"
+										id="photo"
+										onchange="angular.element(this).scope().imageChanged(this.files)">
+								</div>
+								<div class="form-group">
+									<label>Email</label> <input class="form-control" type="email"
+										ng-model="form.email">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<button ng-click="create()" class="btn btn-primary">
+					<i class="fa-solid fa-plus"></i> Thêm
+				</button>
+				<button ng-click="update()" class="btn btn-success">
+					<i class="fa-solid fa-pen"></i> Sửa
+				</button>
+				<button ng-click="delete(form)" class="btn btn-danger">
+					<i class="fa-solid fa-trash"></i> Xóa
+				</button>
+				<button ng-click="reset()" class="btn btn-info">
+					<i class="fa-solid fa-arrows-rotate"></i> Trở lại
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

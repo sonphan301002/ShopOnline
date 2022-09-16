@@ -1,0 +1,346 @@
+/* ----------------------------------------- INDEX -------------------------------------------------- */
+/* MENU */
+.category {
+	font-size: 17px;
+}
+
+.icon-cart {
+	color: black;
+	font-size: 25px;
+}
+.text-cart{
+	color: red;
+	position: relative;
+	top: -13px;
+}
+
+.icon-cart:hover {
+	color: black;
+}
+/* MENU-END */
+
+/* HEADER */
+
+/* HEADER-END */
+
+/* PRODUCT-NEW */
+.product-new {
+	border: white;
+}
+
+.item-product-new {
+	border: white;
+}
+
+.item-product-new:hover {
+	box-shadow: 0 0 5px gray;
+}
+
+.text-product-new {
+	font-size: 25px;
+}
+
+.price-product-new {
+	font-size: 17px;
+	color: orange;
+}
+.all-product {
+	font-size: 18px;
+	color: black;
+}
+
+.all-product:hover {
+	color: black;
+}
+/* PRODUCT-NEW-END */
+
+/* PRODUCT-SALE */
+.product-sale {
+	border: white;
+}
+
+.item-product-sale {
+	border: white;
+}
+
+.item-product-sale:hover {
+	box-shadow: 0 0 5px gray;
+}
+
+.text-product-sale {
+	font-size: 25px;
+}
+
+.price-product-sale {
+	font-size: 17px;
+	color: orange;
+}
+/* PRODUCT-SALE-END */
+
+/* LOGO-TRADEMARK */
+.text-logo-trademark {
+	font-size: 25px;
+}
+.logo-trademark{
+	border: white;
+}
+.logo-trademark-h{
+	border: white;
+}
+.name-logo-trademark{
+	font-size: 20px;
+	font-weight: 500;
+}
+/* LOGO-TRADEMARK=END */
+
+/* ----------------------------------------- LIST-PRODUCT -------------------------------------------------- */
+/* LIST-PRODUCT */
+.card-list-product{
+	border: white;
+}
+.text-list-product{
+	font-size: 25px;
+}
+.card-list-product-h{
+	border: white;
+}
+.card-list-product-h:hover{
+	box-shadow: 0 0 5px gray;
+}
+.price-list-product{
+	color: orange;
+	font-size: 18px;
+}
+.star-product-list{
+	color: #FFCC33;
+	font-size: 12px;
+}
+/* LIST-PRODUCT-END */
+
+/* ----------------------------------------- DETAIL-PRODUCT -------------------------------------------------- */
+/* DETAIL-PRODUCT */
+.detail-product-name{
+	font-size: 25px;
+}
+.card-detail-product{
+	border: white;
+}
+.name-detail-product{
+	font-size: 27px;
+	font-weight: 480;
+}
+.star-detail-product{
+	font-size: 12px;
+	color:  #FFCC33;
+}
+.price-detail-product{
+	font-size: 28px;
+	color: orange;
+}
+.btn-orange{
+	background-color: orange;
+	color: white;
+	border: orange;
+}
+.same-product-name{
+	font-size: 25px;
+}
+.card-same-product{
+	border: white;
+}
+.card-same-product-h{
+	border: white;
+}
+.card-same-product-h:hover{
+	box-shadow: 0 0 5px gray;
+}
+/* DETAIL-PRODUCT-END */
+
+/* ----------------------------------------- SHOPPING-CART -------------------------------------------------- */
+/* SHOPPING-CART */
+.name-shopping-cart{
+	font-size: 25px;
+}
+.card-shopping-cart{
+	border: white;
+}
+/* SHOPPING-CART-END */
+
+/* ----------------------------------------- ORDER-LIST -------------------------------------------------- */
+/* ORDER-LIST */
+.name-order-list{
+	font-size: 25px;
+}
+.card-order-list{
+	border: white;
+}
+/* ORDER-LIST-END */
+
+/* ----------------------------------------- ORDER-CHECKOUT -------------------------------------------------- */
+/* ORDER-CHECKOUT */
+.card-order-checkout{
+	border: white;
+}
+.name-order-checkout{
+	font-size: 25px;
+}
+/* ORDER-CHECKOUT-END */
+
+/* ----------------------------------------- ORDER-DETAIL -------------------------------------------------- */
+/* ORDER-DETAIL */
+.name-order-detail{
+	font-size: 25px;
+}
+.card-order-detail{
+	border: white;
+}
+.name-order-info{
+	font-size: 25px;
+}
+.card-order-info{
+	border: white;
+}
+/* ORDER-DETAIL-END */
+
+/* ----------------------------------------- ACCOUNT-LOGIN -------------------------------------------------- */
+/* ACCOUNT-LOGIN */
+.welcome-account-login{
+	font-size: 25px;
+}
+.new-account-login{
+	font-size: 12px;
+	position: relative;
+	right: -20px;
+}
+.card-account-login{
+	border: white;
+}
+.forgot-account-login{
+	font-size: 13px;
+	position: relative;
+	left: 235px;
+}
+.btn-login{
+	width: 100%;
+	height: 50px;
+	background-color: #f57224;
+	color: white;
+}
+.account-loginwith{
+	font-size: 13px;
+	color: gray;
+}
+.btn-login-facebook{
+	background-color: #3b5998;
+	width: 100%;
+	height: 50px;
+	color: white;
+}
+.btn-login-google{
+	background-color: #d34836;
+	width: 100%;
+	height: 50px;
+	color: white;
+}
+/* ACCOUNT-LOGIN-END */
+
+/* ----------------------------------------- ACCOUNT-REGISTER -------------------------------------------------- */
+/* ACCOUNT-REGISTER */
+.new-account-register{
+	font-size: 25px;
+}
+.account-register-login{
+	font-size: 12px;
+	position: relative;
+	right: 25px;
+}
+.card-account-register{
+	border: white;
+}
+.btn-register{
+	width: 100%;
+	height: 50px;
+	background-color: #f57224;
+	color: white;
+}
+.security-account-register{
+	font-size: 13px;
+	color: gray;
+}
+.account-registerwith{
+	font-size: 13px;
+	color: gray;
+}
+.btn-register-email{
+	width: 100%;
+	height: 50px;
+	border: 1px solid #f57224;
+	background-color: white;
+	color: #f57224;
+}
+.btn-register-email:hover{
+	background-color: #FFEFD5;
+}
+.btn-register-facebook{
+	width: 48%;
+	height: 50px;
+	background-color: #3b5998;
+	color: white;
+}
+.btn-register-google{
+	width: 48%;
+	height: 50px;
+	background-color: #d34836;
+	color: white;
+}
+/* ACCOUNT-REGISTER-END */
+
+/* ----------------------------------------- ACCOUNT-INFO -------------------------------------------------- */
+/* ACCOUNT-INFO */
+.text-account-info{
+	font-size: 25px;
+}
+.card-account-info{
+	border: white;
+}
+.tab-text-account-info{
+	font-size: 20px !important;
+	color: black;
+}
+.tab-text-account-info:hover{
+	color: black;
+	text-decoration: underline;
+}
+.btn-change{
+	background-color: orange;
+	color: white;
+}
+/* ACCOUNT-INFO-END */
+
+/* ----------------------------------------- ADMIN -------------------------------------------------- */
+/* ADMIN-PRODUCT */
+.text-admin-product{
+	font-size: 25px;
+}
+/* ADMIN-PRODUCT-END */
+
+/* ADMIN-CATEGORY */
+.text-admin-category{
+	font-size: 25px;
+}
+/* ADMIN-CATEGORY-END */
+
+/* ADMIN-AUTHORITY */
+.text-admin-authority{
+	font-size: 25px;
+}
+.text-admin-unthorized{
+	font-size: 25px;
+}
+/* ADMIN-AUTHORITY-END */
+
+/* ADMIN-ACCOUNT */
+.text-admin-account{
+	font-size: 25px;
+}
+/* ADMIN-ACCOUNT-END */

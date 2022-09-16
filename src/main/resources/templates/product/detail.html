@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<main th:object="${product}">
+		<!-- DETAIL-PRODUCT -->
+		<div class="container mt-4">
+			<p class="detail-product-name">Chi tiết</p>
+			<div class="card card-detail-product">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="card mt-3 mb-3 ml-2 text-center">
+							<div class="card-body">
+								<img alt="" th:src="@{|/assets/images/*{image}|}" width="250" height="250">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-5 mt-3">
+						<span class="name-detail-product">[[*{name}]]</span>
+						<div class="mt-1 star-detail-product">
+							<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<hr>
+						<p>Thương hiệu: [[*{category.name}]]</p>
+						<span class="price-detail-product">
+							[[*{price}]] đ
+						</span>
+						<hr>
+						<button th:attr="ng-click=@{|cart.add(*{id})|}" class="btn btn-orange">
+							Thêm vào giỏ hàng
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- DETAIL-PRODUCT-END -->
+		
+		<!-- SAME-PRODUCT -->
+		<div class="container mt-4">
+			<p class="same-product-name">Hàng cùng loại</p>
+			<div class="card card-same-product">
+				<div class="row">
+					<div class="col-sm-3" th:each="p:*{category.products}">
+						<div class="card mt-3 mb-3 ml-2 card-same-product-h text-center">
+							<div class="card-body">
+								<a th:href="@{|/product/detail/${p.id}|}">
+									<img alt="" th:src="@{|/assets/images/${p.image}|}" width="120" height="120">
+								</a>
+								<div class="text-left mt-2">
+									<span>[[${p.name}]]</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- SAME-PRODUCT-END -->
+	</main>
+</body>
+</html>

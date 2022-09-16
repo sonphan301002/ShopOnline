@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<main>
+		<!-- ACCOUNT-LOGIN -->
+		<div class="container mt-4">
+			<div class="offset-sm-2">
+				<span class="ml-1 text-left welcome-account-login">Chào mừng bạn.
+					Đăng nhập ngay! </span> <span class="offset-sm-2 new-account-login">Thành
+					viên mới? <a th:href="@{|/account/register/form|}">Đăng ký</a> tại đây
+				</span>
+			</div>
+			<div class="row mt-3">
+				<div class="col-sm-8 offset-sm-2">
+					<div class="card card-account-login">
+						<div class="card-body">
+							<form th:action="@{|/account/login|}" method="post">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Tên đăng nhập</label> <input class="form-control"
+												placeholder="Vui lòng nhập tên đăng nhập!" name="username">
+										</div>
+										<div class="form-group mt-2">
+											<label>Mật khẩu</label> <input class="form-control"
+												type="password" placeholder="Vui lòng nhật mật khẩu!" name="password">
+										</div>
+										<a href="" class="forgot-account-login"> <span>Quên
+												mật khẩu?</span>
+										</a>
+										<p class="text-danger">[[${message}]]</p>
+									</div>
+									<div class="col-sm-6">
+										<button class="btn btn-login mt-3">ĐĂNG NHẬP</button>
+										<p class="mt-2 account-loginwith">Hoặc đăng nhập bằng</p>
+										<button class="btn btn-login-facebook">
+											<i class="fa-brands fa-facebook-f"></i> Facebook
+										</button>
+										<button class="btn btn-login-google mt-2">
+											<i class="fa-brands fa-google"></i> Google
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ACCOUNT-LOGIN-END -->
+	</main>
+</body>
+</html>
